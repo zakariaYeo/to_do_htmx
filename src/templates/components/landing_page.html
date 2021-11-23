@@ -1,0 +1,8 @@
+<!-- landing_page.html -->
+{% if not user.is_authenticated %}
+<p> To start, please make an
+    <span hx-get="{% url 'account_signup' %}" hx-target="#authentication" hx-trigger="click"
+        class="hyperlink-underline">
+        account
+    </span>.
+    {% endif %}
